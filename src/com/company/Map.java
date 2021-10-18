@@ -25,6 +25,8 @@ public class Map {
         size=41;
         inc = 40;
         HashTable=new hTabbleObject[size];
+        for(int i=0;i<size;i++)
+            HashTable[i]=new hTabbleObject();
     }
     private class hTabbleObject{
         public Pair node=new Pair();
@@ -34,6 +36,7 @@ public class Map {
 
     private int find(Object key){
         int index=(key.hashCode())%size;
+        index=Math.abs(index);
         int result = -1;
         SuccessSearchFlag=false;
         int i =0;
