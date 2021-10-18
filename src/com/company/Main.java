@@ -7,6 +7,7 @@ public class Main {
        int i = 1;
         Scanner in = new Scanner(System.in);
        List l=new List();
+       l.remove(0);
        while (i>0&&i<9){
         i = in.nextInt();
         switch (i) {
@@ -62,7 +63,7 @@ public class Main {
         }
     }
         System.out.print("1 - put\n2-get\n3-get def\n4-remove\n 5-key contains \n 6-size \n7-print keys\n8-print val\n 0- end");
-        Map m=new Map(10);
+        Map m=new Map(3);
        i=1;
        String v="";
         while (i>0&&i<9){

@@ -3,6 +3,7 @@ package com.company;
 public class List {
 private ListOb top=null,end;
 private int sz=0;
+
 private class ListOb{
     ListOb(Object val){
         this.val=val;
@@ -14,8 +15,8 @@ private class ListOb{
 public List(){}
 public List(List l){
     for(int i = 0;i<l.size();++i){
+        add(l.get(i));
     }
-    sz=l.size();
     }
 int size(){
     return sz;
@@ -92,7 +93,7 @@ public Object remove(int pos){
     }
     return result;
 }
-    public Object set(Object val,int pos){
+public Object set(Object val,int pos){
         Object res=null;
         ListOb tmp=top;
         if(pos<sz&&pos>=0){
@@ -104,12 +105,11 @@ public Object remove(int pos){
         }
         return  res;
     }
-    public boolean contains(Object val){
+public boolean contains(Object val){
 
         return indexOf(val)>-1;
     }
-
-    public int indexOf(Object val){
+public int indexOf(Object val){
         ListOb tmp=top;
         for(int i=0;i<sz;i++){
             if(tmp.val.equals((val))){
@@ -119,9 +119,8 @@ public Object remove(int pos){
         }
         return  -1;
     }
-    public boolean isEmpty(){
+public boolean isEmpty(){
     return  sz>0;
     }
 }
-
 

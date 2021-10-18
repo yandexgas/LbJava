@@ -7,6 +7,7 @@ public class Map {
     private int count=0;
     private boolean SuccessSearchFlag;
     private hTabbleObject[] HashTable;
+
     public Map(int defSize){
         if((defSize&1)==1){
         size=defSize;
